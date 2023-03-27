@@ -3,10 +3,62 @@
     <title>
         Projects 
     </title>
-    <h1>Projects I have made so far.</h1>
+    <h1  style="font-family:'Courier New', Courier, monospace">These are the projects I have made so far.</h1>
 </head>
-<body>
-   <p style="font-family: Arial">H</p>
+<body bgcolor="lightblue">
+    <style>
+        h1 {
+            font-size: 28px;
+        }
+        
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f56464;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card img {
+            max-width: 100%;
+        }
+
+        .project-card h3 {
+            margin-top: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .project-card p {
+            margin-top: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .project-card a {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #b56464;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #f1f1f1;
+        }
+
+    </style>
+    <div class="project-card">
+        <img src="/images/f1.png" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Are you a passionate fan of the best automative competition Formula 1? Do not hesitate in using this interactive 
+            dashboard where you can see all-time stats from all the top drivers.</p>
+        <a href="project1.html">Click to see more</a>
+      </div>
  
     
 </body>

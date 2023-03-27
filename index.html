@@ -6,29 +6,134 @@
     </title>
 
 </head> 
-<body> 
-
+<body bgcolor="lightblue"> <!-- bgcolor changes the background color of the wgole website-->
+    <!-- Paragraph and titles: colours-->
     <style>
         p {
-            color: rgb(165, 57, 57);
+            color: rgb(9, 45, 78);
             font-size: 20px;
             font-style: normal;
             text-align: justify;
         }
 
         h1 {
-            color: rgb(119, 39, 39);
+            color: rgb(9, 45, 78);
             font-size: 36px;
             text-align: center;
         }
-        </style>
-    <h1> Welcome to my Portfolio!
 
-    </h1>
+        h2 {
+            color: rgb(9, 45, 78);
+            font-size: 28px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        img.circle {
+            border-radius: 50%;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(102, 153, 234);
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a.active {
+            background-color: #2559d0;
+            color: white;
+        }
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .navbar li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        input[type=text], input[type=email], textarea {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+            width: 80%;
+            }
+        }
+        
+        </style>
+
+    <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Content of the page -->
+    <div style="padding: 80px 0px 0px 0px;">
+        <h1 id="home">Welcome to my Portfolio!</h1>
+        <!-- Your content here -->
+    </div>
+
+    <div style="padding: 50px 0px 0px 0px;">
+        <h2 id="projects">My Projects</h2>
+        <!-- Your projects here -->
+    </div>
+
+    <div style="padding: 50px 0px 0px 0px;">
+        <h2 id="contact">Contact Me</h2>
+        <!-- Your contact form here -->
+    </div>
     <hr>
-    <h1> I am Pablo Vico van Berkel.</h1>
+    <h1 style="font-family:'Courier New', Courier, monospace"> I am Pablo Vico van Berkel.</h1>
     <br>
-    <p style="font-family: Arial"> I am a <b>Data Science</b> student at <i>Eindhoven Technical University</i> & <i>Tilburg University</i>. 
+    <p style="font-family: 'Courier New', Courier, monospace"> I am a <b>Data Science</b> student at <i>Eindhoven Technical University</i> & <i>Tilburg University</i>. 
         I consider myself a passionate data scientist about exploring the practical applications of this field. I have a keen interest
         in programming and am constantly teaching myself new techniques to stay up-to-date with the latest developments in this 
         dynamic field. I am a hardworking and diligent learner who is also passionate about playing padel in my spare time. 
@@ -37,23 +142,40 @@
     <hr>
     <ul>
         <li>
-            <a href="https://www.linkedin.com/in/pablovico/" target="_blank" rel="me" title="LinkedIn">
-                <img src="/images/LinkedIn-Symbole.png" height="24" width="22">
+            <a href="https://www.linkedin.com/in/pablovico/" target="_blank" rel="me" title="LinkedIn account">
+                <img class="circle" src="/images/LinkedIn-Symbole.png" height="45" width="78">
             </a>
 
         </li>
             <a href="https://github.com/pvicovanberkel" target="_blank" title="GitHub account">
-                <img src="/images/github.png" height="28" width="28">
+                <img class="circle" src="/images/github.png" height="45" width="54">
             </a>
         </li>
-
+        <li>
+            <a href="https://leetcode.com/pvicovanberkel/" target="_blank" title="LeetCode account">
+                <img class="circle" src="/images/leetcode.png" height="45" width="54">
+            </a>
+        </li>
     </ul>
     <hr> 
     <h2> Make sure to checkout my
-        <a href="projectspage.html" target="_blank" title="My projects.">
-            projects
-        </a>
+        <a href="projectspage.html" target="_blank" title="My projects."> projects</a>
     </h2>
-
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form action="/submit-form" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name please..." required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email please..." required>
+      
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write me a messeage..." style="height:200px" required></textarea>
+      
+            <input type="submit" value="Send">
+        </form>
+      </div>
 </body>
 </html>
+
