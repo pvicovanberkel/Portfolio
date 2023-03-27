@@ -7,7 +7,7 @@
 
 </head> 
 <body bgcolor="lightblue"> <!-- bgcolor changes the background color of the wgole website-->
-    <!-- Paragraph and titles: colours-->
+    
     <style>
         p {
             color: rgb(9, 45, 78);
@@ -97,10 +97,12 @@
             cursor: pointer;
         }
 
+  
         input[type=submit]:hover {
             background-color: #45a049;
         }
 
+        /* Center the form on small screens */
         @media screen and (max-width: 600px) {
             .container {
             width: 80%;
@@ -115,7 +117,6 @@
         <a href="#contact">Contact</a>
     </div>
 
-    <!-- Content of the page -->
     <div style="padding: 80px 0px 0px 0px;">
         <h1 id="home">Welcome to my Portfolio!</h1>
         <!-- Your content here -->
@@ -132,6 +133,7 @@
     </div>
     <hr>
     <h1 style="font-family:'Courier New', Courier, monospace"> I am Pablo Vico van Berkel.</h1>
+        <h1 style="font-family:'Courier New', Courier, monospace"> I am Pablo Vico van Berkel.</h1>
     <br>
     <p style="font-family: 'Courier New', Courier, monospace"> I am a <b>Data Science</b> student at <i>Eindhoven Technical University</i> & <i>Tilburg University</i>. 
         I consider myself a passionate data scientist about exploring the practical applications of this field. I have a keen interest
@@ -140,6 +142,7 @@
         I am excited to apply my skills and knowledge to help companies tackle real-world challenges using Data Science 
         techniques. </p>
     <hr>
+
     <ul>
         <li>
             <a href="https://www.linkedin.com/in/pablovico/" target="_blank" rel="me" title="LinkedIn account">
@@ -178,4 +181,38 @@
       </div>
 </body>
 </html>
+
+    </div>
+
+    <div style="padding: 50px 0px 0px 0px;">
+        <h2 id="projects">My Projects</h2>
+        <!-- Your projects here -->
+    </div>
+
+    <div style="padding: 50px 0px 0px 0px;">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name..." required>
+          
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email..." required>
+          
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write something..." style="height:200px" required></textarea>
+          
+                <input type="submit" value="Send">
+            </form>
+          </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
