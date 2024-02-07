@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Apple Inspired</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Uber Move Text', sans-serif;
+        }
+        .apple-btn {
+            /*display: inline-block;*/
+            background-color: #0077b6; /* Button background color */
+            color: #ffffff;
+            padding: 10px 40px;
+            border-radius: 20px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .apple-btn:hover {
+            background-color: #005f73;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        *:focus,
+        *:active {
+          outline: none !important;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        html,
+        body {
+          display: grid;
+          height: 100%;
+          width: 100%;
+          font-family: "Poppins", sans-serif;
+          place-items: center;
+          background-color: #020c1b;
+            color: #ffffff;
+          /*background: linear-gradient(315deg, #ffffff, #d7e1ec);*/
+
+        }
+
+        .wrapper {
+          display: inline-flex;
+          list-style: none;
+        }
+
+        .wrapper .icon {
+          position: relative;
+          background: #ffffff;
+          border-radius:15px;
+          padding: 15px;
+          margin: 10px;
+          width: 50px;
+          height: 50px;
+          font-size: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .tooltip {
+          position: absolute;
+          top: 0;
+          font-size: 14px;
+          background: #ffffff;
+          color: #ffffff;
+          padding: 5px 8px;
+          border-radius: 5px;
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .tooltip::before {
+          position: absolute;
+          content: "";
+          height: 8px;
+          width: 8px;
+          background: #ffffff;
+          bottom: -3px;
+          left: 50%;
+          transform: translate(-50%) rotate(45deg);
+          transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .wrapper .icon:hover .tooltip {
+          top: -45px;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+
+        .wrapper .icon:hover span,
+        .wrapper .icon:hover .tooltip {
+          text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .wrapper .facebook:hover,
+        .wrapper .facebook:hover .tooltip,
+        .wrapper .facebook:hover .tooltip::before {
+          background: #1877F2;
+          color: #ffffff;
+        }
+
+        .wrapper .tiktok:hover,
+        .wrapper .tiktok:hover .tooltip,
+        .wrapper .tiktok:hover .tooltip::before {
+          background: #000000;
+          color: #ffffff;
+        }
+
+        .wrapper .instagram:hover,
+        .wrapper .instagram:hover .tooltip,
+        .wrapper .instagram:hover .tooltip::before {
+          background: #7a21b6;
+          color: #ffffff;
+        }
+
+        .wrapper .youtube:hover,
+        .wrapper .youtube:hover .tooltip,
+        .wrapper .youtube:hover .tooltip::before {
+          background: #CD201F;
+          color: #ffffff;
+        }
+
+        section.card {
+          /*background: #000046;*/
+          /*background: -webkit-linear-gradient(to right, #1CB5E0, #000046);*/
+          /*background: linear-gradient(to right, #1CB5E0, #000046);*/
+          background-color: #023e7d;
+            padding: 20px;
+          border-radius: 24px 24px 24px 48px;
+          padding: 48px 48px 48px 308px;
+          margin: 84px 0;
+          min-width: 640px;
+          display: flex;
+          flex-direction: row;
+          align-self: flex-start;
+          position: relative;
+          /**box-shadow: 5px 0 0 0 rgba(204, 204, 204, 0.3), -5px 0 0 0 rgba(204, 204, 204, 0.3), 0 5px 0 0 rgba(204, 204, 204, 0.3);/
+           */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section.card .text-content {
+          display: flex;
+          flex-direction: column;
+          width: calc(60vw - 192px);
+        }
+
+        section.card .text-content h3 {
+          margin: 0;
+          font-size: 1.5em;
+          max-width: 20ch;
+          color: #fff;
+        }
+
+        section.card .text-content p {
+          margin: 25px 0 24px;
+          color: #fff;
+        }
+
+        section.card .text-content a {
+          border: 3px solid #f2f2f2;
+          color: #ffffff;
+          align-self: flex-start;
+          text-decoration: none;
+          padding: 16px 32px;
+          border-radius: 12px;
+          transition: 400ms all;
+        }
+
+        section.card .text-content a:hover {
+          background: #051c5e;
+          color: white;
+        }
+
+        section.card .visual {
+          width: 240px;
+          height: 100%;
+          position: absolute;
+          top: -24px;
+          left: 24px;
+          overflow: hidden;
+          border-radius: 24px;
+        }
+
+        section.card .visual img {
+          height: 110%;
+        }
+
+        article {
+          margin: auto;
+          display: block;
+          width: calc(60vw + 248px);
+          max-width: calc(920px + 248px);
+          min-width: calc(640px + 248px);
+        }
+
+        @media all and (max-width: 1100px) {
+          body {
+            padding: 96px 48px 24px;
+          }
+          article {
+            width: 100%;
+            min-width: 100%;
+          }
+          section.card {
+            min-width: 100%;
+          }
+          section.card .text-content {
+            width: 100%;
+          }
+        }
+
+        @media all and (max-width: 720px) {
+          body {
+            padding: 48px 24px 0;
+          }
+          section.card {
+            margin: 64px 0;
+            padding: 88px 36px 36px;
+            flex-direction: column;
+            border-radius: 24px;
+          }
+          section.card .text-content h3 {
+            max-width: calc(100% - 150px);
+            font-size: 1em;
+          }
+          section.card .text-content p,
+          section.card .text-content a {
+            font-size: 0.8em;
+          }
+          section.card .visual {
+            width: 150px;
+            height: 150px;
+            right: 16px;
+            left: auto;
+            border-radius: 50%;
+          }
+          section.card .visual img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+    /* CSS styles from provided stylesheet */
+    nav {
+      margin: 27px auto 0;
+      position: relative;
+      width: 590px;
+      height: 50px;
+      background-color: #34495e;
+      border-radius: 8px;
+      font-size: 0;
+    }
+
+    nav a {
+      line-height: 50px;
+      height: 100%;
+      font-size: 15px;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav .animation {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      z-index: 0;
+      transition: all .5s ease 0s;
+      border-radius: 8px;
+    }
+
+    a:nth-child(1) {
+      width: 100px;
+    }
+
+    a:nth-child(2) {
+      width: 110px;
+    }
+
+    a:nth-child(3) {
+      width: 100px;
+    }
+
+    a:nth-child(4) {
+      width: 160px;
+    }
+
+    a:nth-child(5) {
+      width: 120px;
+    }
+
+    nav .start-home,
+    a:nth-child(1):hover~.animation {
+      width: 100px;
+      left: 0;
+      background-color: #1abc9c;
+    }
+
+    nav .start-about,
+    a:nth-child(2):hover~.animation {
+      width: 110px;
+      left: 100px;
+      background-color: #e74c3c;
+    }
+
+    nav .start-work,
+    a:nth-child(3):hover~.animation {
+      width: 100px;
+      left: 210px;
+      background-color: #3498db;
+    }
+
+    nav .start-projects,
+    a:nth-child(4):hover~.animation {
+      width: 160px;
+      left: 310px;
+      background-color: #9b59b6;
+    }
+
+    nav .start-contact,
+    a:nth-child(5):hover~.animation {
+      width: 120px;
+      left: 470px;
+      background-color: #e67e22;
+    }
+    a:hover, .button:hover {
+      text-decoration: underline; /* Underline links on hover */
+    }
+
+    /*body {*/
+    /*  font-size: 12px;*/
+    /*  font-family: sans-serif;*/
+    /*  background: #2c3e50;*/
+    /*}*/
+
+    h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+      margin: 40px 0 40px;
+      text-align: center;
+      font-size: 30px;
+      color: #0a9396;
+      text-shadow: 2px 2px 4px #000000;
+      font-family: 'Uber Move', cursive;
+    }
+
+    h1 {
+      font-size: 36px; /* Large font size for primary headings */
+      margin-bottom: 10px; /* Spacing after heading */
+    }
+
+    h2 {
+      font-size: 30px; /* Secondary heading size */
+    }
+
+    p {
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: #ecf0f1;
+      font-family: 'Uber Move', cursive;
+      font-size: 16px;
+    }
+
+    span {
+      color: #2BD6B4;
+    }
+    .about {
+    padding: 80px 0;
+    }
+
+    .skill-tag {
+        display: inline-block;
+        background-color: #1f2937; /* Tailwind color gray-800 */
+        color: white;
+        padding: 6px 12px;
+        border-radius: 12px;
+        font-size: 0.875rem; /* Tailwind text-sm */
+        font-weight: 600;
+    }
+
+    /* Tailwind CSS for responsive design */
+    @media (min-width: 640px) {
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 768px) {
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+
+    </style>
+</head>
+
+<body class="bg-white flex flex-col items-center justify-center min-h-screen">
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Work</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <div class="container mx-auto">
+        <!-- Hero Section -->
+        <section class="hero bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('/Users/pvicovanberkel/Downloads/portfoliobackground.jpg');">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-black mb-4">Hello, I'm Pablo Vico van Berkel, a BSc Data Science student with a passion for creating intuitive experiences</h1>
+                <p class="text-lg text-gray-700 mb-6">I am passionate about creating experiences that are easy to use, accessible, and meet the user's needs.</p>
+                <a href="#" class="apple-btn">Learn More</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about py-16 bg-white text-center">
+            <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <p class="text-lg text-gray-700 mb-8">Brief description about yourself goes here.</p>
+        </section>
+
+
+<!-- Skillset Section (newly added based on the screenshot) -->
+        <section class="skills-section py-16 bg-white">
+        <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+        <div class="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="skillset bg-gray-800 text-white p-4 rounded-lg shadow-md">
+                <div class="flex flex-wrap justify-center gap-2">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Numpy</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <!-- ... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <article>
+            <section class="card">
+              <div class="text-content">
+                <h3>Interactive Dashboard WorldCup 2022 Edition</h3>
+                <p>Together with three colleagues we built an interactive dashboard using Dash. </p>
+<!--                <a href="https://www.web-leb.com/code">Join now</a>-->
+              </div>
+              <div class="visual">
+                <img src="/Users/pvicovanberkel/Desktop/Worldmap_Project.png" alt="" />
+              </div>
+            </section>
+          </article>
+
+        <!-- Contact Section -->
+        <section class="contact py-16 bg-black text-white text-center">
+            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+            <p class="mb-8">Have a project in mind? I'd love to hear from you. Let's chat.</p>
+            <a href="#" class="apple-btn">Contact Me</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4 text-center mt-auto">
+        &copy; 2024 [Your Name]. All rights reserved.
+
+        <ul class="wrapper">
+            <li class="icon facebook">
+              <span><i class="fab fa-facebook-f"></i></span>
+            </li>
+            <li class="icon youtube">
+              <span><i class="fab fa-youtube"></i></span>
+            </li>
+            <li class="icon tiktok">
+              <span><i class="fab fa-tiktok"></i></span>
+            </li>
+            <li class="icon instagram">
+              <span><i class="fab fa-instagram"></i></span>
+            </li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>
