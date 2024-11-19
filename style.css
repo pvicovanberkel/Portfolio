@@ -130,18 +130,18 @@ header p {
   font-size: 2.2em;
   color: #34495e; /* Bold navy header */
   margin-bottom: 20px;
-  text-align: left; /* Align the section title to the left */
+  text-align: left;
 }
 
 .projects p {
   font-size: 1.1em;
-  color: #7f8c8d; /* Lighter gray text for better readability */
+  color: #7f8c8d; /* Lighter gray text for readability */
   margin-bottom: 20px;
 }
 
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
   gap: 20px;
 }
 
@@ -166,22 +166,23 @@ header p {
   margin-bottom: 10px;
 }
 
-/* Add hover effect to the cards */
+/* Hover effect for the project cards */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slight elevation on hover */
 }
 
-/* Make the cards responsive */
+/* Responsive Design - 2 columns on medium screens */
 @media (max-width: 1200px) {
   .project-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
   }
 }
 
+/* Responsive Design - 1 column on smaller screens */
 @media (max-width: 768px) {
   .project-cards {
-    grid-template-columns: 1fr; /* 1 card per row on small screens */
+    grid-template-columns: 1fr; /* 1 column per row */
   }
 }
 
