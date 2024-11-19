@@ -1,216 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>
-        Portfolio
-    </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pablo Vico | Data Scientist</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
 
-</head> 
-<body bgcolor="#f2f2f2"> 
-    <style>
-        body.light {
-            background-color: #f2f2f2;
-            color: rgb(9, 45, 78);
-        }
+<header>
+    <section class="social-links">
+        <a href="https://www.linkedin.com/in/pablovicovanberkel" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.books.com" target="_blank" class="social-icon"><i class="fas fa-book"></i> Books</a>
+    </section>
 
-        body.dark {
-        background-color: #262626;
-        color: #f2f2f3;
-        }
+    <!-- Add your picture here -->
+    <img src="/images/CVPhoto.jpg" alt="Pablo Vico van Berkel" class="profile-photo">
 
-        p {
-            color: rgb(9, 45, 78);
-            font-size: 20px;
-            font-style: normal;
-            text-align: justify;
-        }
-
-        h1 {
-            color: rgb(9, 45, 78);
-            font-size: 36px;
-            text-align: center;
-        }
-
-        h2 {
-            color: rgb(9, 45, 78);
-            font-size: 28px;
-            text-align: center;
-        }
-
-        .accounts {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        img.circle {
-            border-radius: 50%;
-        }
-
-        .bio {
-            margin-left: 60px;
-            margin-right: 60px;
-        }
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #3c5d3e;
-            overflow: hidden;
-        }
-
-        .navbar a {
-            float: right;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .navbar a.active {
-            background-color: #2559d0;
-            color: white;
-        }
-
-        .navbar ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        
-        .navbar li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        .container {
-            width: 50%;
-            margin: 50px auto;
-            border-radius: 5px;
-            background-color: #c0c0c0;
-            padding: 20px;
-        }
-
-        input[type=text], input[type=email], textarea {
-            width: 100%;
-            padding: 6px;
-            border: 1px solid rgb(207, 170, 170);
-            border-radius: 4px;
-            resize: vertical;
-        }
-
-        input[type=submit] {
-            background-color: #3c5d3e;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-  
-        input[type=submit]:hover {
-            background-color: #3c5d3e;
-        }
-
-        @media screen and (max-width: 600px) {
-            .container {
-            width: 80%;
-            }
-        }
-        
-        </style>
-
-    <div class="navbar">
-        <a class="active" href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <button onclick="toggleMode()">Toggle Mode</button>
+    <div class="header-container">
+        <h1>Hi I´m Pablo Vico van Berkel</h1>
+        <p>Data Scientist | Student | Python, R, SQL Enthusiast</p>
     </div>
+</header>
+    
 
-    <script>
-        function toggleMode() {
-            const body = document.querySelector("body");
-            if (body.classList.contains("light")) {
-                body.classList.remove("light");
-                body.classList.add("dark");
-            } else {
-                body.classList.remove("dark");
-                body.classList.add("light");
-            }
-        }
-    </script>
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Data Science student at Eindhoven University of Technology and Tilburg University with a focus on statistical computing, programming, and data analytics. I am highly motivated to utilize my skills in data analysis and machine learning to solve real-world problems. Passionate about innovation and technological advancements, I am dedicated to making an impact through data science.
+    </p>
+  </section>
 
-    <div style="padding: 80px 0px 0px 0px;">
-        <h1 id="home" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-            Welcome to my Portfolio!</h1>
-        <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> 
-            I am Pablo Vico van Berkel</h1>
-        <br>
-            <div class="bio">
-                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";> 
-            I am a <b>Data Science</b> student at <i>Eindhoven Technical University</i> & <i>Tilburg University</i>. 
-            I consider myself a passionate data scientist about exploring the practical applications of this field. I have a keen interest
-            in programming and am constantly teaching myself new techniques to stay up-to-date with the latest developments in this 
-            dynamic field. I am a hardworking and diligent learner who is also passionate about playing padel in my spare time. 
-            I am excited to apply my skills and knowledge to help companies tackle real-world challenges using Data Science 
-            techniques. </p>
-            
-            </div>
-            <ul class="accounts">
-                <li>
-                    <a href="https://www.linkedin.com/in/pablovico/" target="_blank" rel="me" title="LinkedIn account">
-                        <img class="circle" src="/images/LinkedIn-Symbole.png" height="45" width="66">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/pvicovanberkel" target="_blank" title="GitHub account">
-                        <img class="circle" src="/images/github.png" height="45" width="54">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://leetcode.com/pvicovanberkel/" target="_blank" title="LeetCode account">
-                        <img class="circle" src="/images/leetcode.png" height="45" width="54">
-                    </a>
-                </li>
-            </ul>
-    </div>
+  <section class="education">
+    <h2>Education</h2>
+    <p><strong>Joint BSc. Data Science</strong> - Eindhoven University of Technology & Tilburg University (2022 - 2025)<br>
+    Focus: Statistical Computing, Programming, Data Analytics, Linear Algebra.<br>
+    Top 1% of the class in Data Challenges.</p>
+    <p><strong>Minor, Computer Science Essentials</strong> - Eindhoven University of Technology (2023 - 2024)</p>
+    <p><strong>Minor, Security for Computer Science</strong> - Eindhoven University of Technology (2023 - 2025)</p>
+    <p><strong>Bachelor's Degree in Technical Drawing / Computer Science / Mathematics</strong> - IES S’Arenal, Palma, Spain (2020 - 2022)</p>
+  </section>
 
-    <div style="padding: 50px 0px 0px 0px;">
-        <h2 id="projects">My Projects</h2>
-        <!-- Your projects here -->
-    </div>
+  <section class="experience">
+    <h2>Professional Experience</h2>
+    <h3>Teaching Assistant</h3>
+    <p>Eindhoven University of Technology (06/2024 – Present)</p>
+    <ul>
+      <li>Developing a comprehensive pipeline with a dashboard to promote, organize, predict, and automate the nomination process for academic awards.</li>
+      <li>Streamlining award nominations at internal, national, and international levels using automated data extraction and tailored email generation.</li>
+    </ul>
+    
+    <h3>Student Mentor</h3>
+    <p>Eindhoven University of Technology (08/2024 – Present)</p>
+    <ul>
+      <li>Providing guidance and support to fellow students to help them navigate academic challenges and achieve their educational goals.</li>
+    </ul>
+    
+    <h3>Data Analyst Intern</h3>
+    <p>Riu Hotels & Resorts (07/2024 – 08/2024)</p>
+    <ul>
+      <li>Analyzed and interpreted data to support business decisions, created a comprehensive dashboard with visualizations.</li>
+      <li>Collaborated with various departments to optimize operational efficiency and enhance customer satisfaction.</li>
+    </ul>
+    
+    <h3>Receptionist (Full-Time)</h3>
+    <p>Riu Hotels & Resorts (07/2021 – 08/2023)</p>
+    <ul>
+      <li>Managed guest inquiries, reservations, and check-ins while demonstrating proficiency in multilingual communication (English, Spanish, German, Dutch, Catalan).</li>
+      <li>Used hotel management software for efficient processing of reservations, check-ins, and check-outs.</li>
+    </ul>
+  </section>
 
-    <div style="padding: 50px 0px 0px 0px;">
-        <h2 id="contact">Contact Me</h2>
-        <div class="container">
-            <h2>Get in touch with me!</h2>
-            <form action="/submit-form" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your name please..." required>
-          
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your email please..." required>
-          
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Write me a messeage..." style="height: 200px" 
-                required></textarea>
-          
-                <input type="submit" value="Send">
-            </form>
-        </div>
-    </div>
+  <section class="skills">
+    <h2>Skills & Interests</h2>
+    <h3>Technical Skills</h3>
+    <p>Python, R, SQL, HTML, CSS, Excel</p>
+    <h3>Languages</h3>
+    <p>English (C1), Spanish (Native), Catalan (Native), Dutch (A1)</p>
+    <h3>Interests</h3>
+    <ul>
+      <li>Technological Analysis: Exploring new tech startups and their impact on industries.</li>
+      <li>Innovation: Identifying and incorporating cutting-edge solutions.</li>
+      <li>Web Development: Passion for creating web interfaces with HTML and CSS.</li>
+      <li>Electronics & Hardware: Enthusiastic about Arduino projects and DIY electronics.</li>
+      <li>Sports: Weightlifting, Tennis, Padel, Running, Football.</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2024 Pablo Vico. All rights reserved.</p>
+    <p>Contact: <a href="mailto:p.vicovanberkel@gmail.com">p.vicovanberkel@gmail.com</a></p>
+    <p><a href="https://linkedin.com/in/pablovicovanberkel" target="_blank">LinkedIn Profile</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
