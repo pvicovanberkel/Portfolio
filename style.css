@@ -1,184 +1,258 @@
+/* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  color: #34495e; /* Navy Text Color */
+  line-height: 1.6;
+  padding: 0 10%;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #34495e; /* Navy background */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.center-content a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0 15px;
+  padding: 10px;
+}
+
+.center-content a:hover {
+  color: #4CAF50; /* Green Hover */
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #34495e;
+  color: white;
+}
+
+.profile-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5em;
+}
+
+/* About Section */
+.about {
+  margin-top: 40px;
+}
+
+.about h2 {
+  font-size: 2.2em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+/* Books Section */
+/* Books Section */
+.books {
+  margin-top: 40px;
+}
+
+.books h2 {
+  font-size: 2.2em;
+  color: #34495e; /* Navy header color */
+  margin-bottom: 20px;
+  text-align: left; /* Align the section title to the left */
+}
+
+.book-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.book {
+  text-align: center;
+  max-width: 150px;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.book img:hover {
+  transform: scale(1.05); /* Zoom in by 10% when hovered */
+}
+
+
+/* Projects Section */
+.projects {
+  margin-top: 40px;
+}
+
+.projects h2 {
+  font-size: 2.2em;
+  color: #34495e; /* Bold navy header */
+  margin-bottom: 20px;
+  text-align: left; /* Align the section title to the left */
+}
+
+.projects p {
+  font-size: 1.1em;
+  color: #7f8c8d; /* Lighter gray text for better readability */
+  margin-bottom: 20px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  color: #34495e; /* Bold navy */
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1.1em;
+  color: #7f8c8d; /* Lighter gray text */
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Add hover effect to the cards */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slight elevation on hover */
+}
+
+/* Make the cards responsive */
+@media (max-width: 1200px) {
+  .project-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
   }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 0 10%;
+}
+
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
   }
-  
-  header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.5em;
-  }
-  
-  section {
-    padding: 40px 0;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 2em;
-    color: #4CAF50;
-    margin-bottom: 20px;
-  }
-  
-  h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  p, ul {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style: inside;
-  }
-  
-  .project, .skills ul {
-    margin-top: 10px;
-  }
-  
-  footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.1em;
-    border-radius: 10px;
-  }
-  
-  footer p {
-    margin: 10px 0;
-  }
-  
-  footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  form label {
-    margin: 10px 0 5px;
-    font-size: 1.1em;
-  }
-  
-  form input, form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 1.1em;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    transition: border 0.3s;
-  }
-  
-  form input:focus, form textarea:focus {
-    border: 1px solid #4CAF50;
-  }
-  
-  @media (max-width: 768px) {
-    body {
-      padding: 0 5%;
-    }
-  
-    header h1 {
-      font-size: 2.5em;
-    }
-  
-    header p {
-      font-size: 1.2em;
-    }
-  
-    section {
-      padding: 30px 0;
-    }
-  
-    h2 {
-      font-size: 1.8em;
-    }
-  
-    button {
-      width: 100%;
-    }
-  
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-  
-    .social-icon {
-      display: flex;
-      align-items: center;
-      font-size: 1.2em;
-      text-decoration: none;
-      color: #333;
-      transition: color 0.3s, transform 0.3s;
-    }
-  
-    .social-icon i {
-      margin-right: 8px;
-    }
-  
-    .social-icon:hover {
-      color: #4CAF50; /* Green color on hover */
-      transform: scale(1.1); /* Slight zoom effect */
-    }
-  
-    .social-icon:hover i {
-      color: #4CAF50;
-    }
-  
-    /* Style for the profile image */
-    .profile-photo {
-      width: 120px; /* Set the width */
-      height: 120px; /* Set the height */
-      border-radius: 50%; /* Makes the image round */
-      display: block;
-      margin: 20px auto; /* Center the image */
-      object-fit: cover; /* Ensures the image fits without distortion */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow around the image */
-    }
-  }
-  
+}
+
+/* Contact Section */
+.contact {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.2em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Footer Section */
+footer {
+  background-color: #34495e;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 1.1em;
+  color: #ecf0f1; /* Light gray text */
+  margin: 10px 0;
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin: 5px;
+}
+
+footer a:hover {
+  color: #2ecc71;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  margin: 0 15px;
+}
+
+footer p:last-child {
+  margin-top: 20px;
+  font-size: 1em;
+}

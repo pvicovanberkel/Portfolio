@@ -10,70 +10,92 @@
 </head>
 <body>
 
-<header>
-    <section class="social-links">
-        <a href="https://www.linkedin.com/in/pablovicovanberkel" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.books.com" target="_blank" class="social-icon"><i class="fas fa-book"></i> Books</a>
-    </section>
-
-    <!-- Add your picture here -->
-    <img src="/images/CVPhoto.jpg" alt="Pablo Vico van Berkel" class="profile-photo">
-
-    <div class="header-container">
-        <h1>Hi I´m Pablo Vico van Berkel</h1>
-        <p>Data Scientist | Student | Python, R, SQL Enthusiast</p>
+  <!-- Top Bar (Centered with Icons) -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="center-content">
+        <a href="https://www.linkedin.com/in/pablovicovanberkel" target="_blank" class="icon-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com" target="_blank" class="icon-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#books" class="icon-link">
+          <i class="fas fa-book"></i>
+        </a>
+      </div>
     </div>
-</header>
-    
+  </div>
 
+  <!-- Header Section -->
+  <header>
+    <div class="profile-container">
+      <img src="/images/CVPhoto.jpg" alt="Pablo Vico van Berkel" class="profile-photo">
+    </div>
+    <div class="header-container">
+      <h1>Hi I’m Pablo Vico van Berkel</h1>
+      <p>BSc Student | Machine Learning & AI Enthusiast</p>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
   <section class="about">
     <h2>About Me</h2>
     <p>
-      I am a Data Science student at Eindhoven University of Technology and Tilburg University with a focus on statistical computing, programming, and data analytics. I am highly motivated to utilize my skills in data analysis and machine learning to solve real-world problems. Passionate about innovation and technological advancements, I am dedicated to making an impact through data science.
+      I am a BSc student with a strong interest in Machine Learning and Artificial Intelligence. I am passionate about utilizing these technologies to solve complex problems and make an impact in the world. I am constantly learning and applying new skills to stay at the forefront of the field.
     </p>
   </section>
 
-  <section class="education">
-    <h2>Education</h2>
-    <p><strong>Joint BSc. Data Science</strong> - Eindhoven University of Technology & Tilburg University (2022 - 2025)<br>
-    Focus: Statistical Computing, Programming, Data Analytics, Linear Algebra.<br>
-    Top 1% of the class in Data Challenges.</p>
-    <p><strong>Minor, Computer Science Essentials</strong> - Eindhoven University of Technology (2023 - 2024)</p>
-    <p><strong>Minor, Security for Computer Science</strong> - Eindhoven University of Technology (2023 - 2025)</p>
-    <p><strong>Bachelor's Degree in Technical Drawing / Computer Science / Mathematics</strong> - IES S’Arenal, Palma, Spain (2020 - 2022)</p>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <p>Explore the various projects I've worked on, associated with Eindhoven University of Technology (TU/e). Here are some of the most notable ones:</p>
+    
+    <div class="project-cards">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <h3>Interactive Web App for Improving Trust in London’s Metropolitan Police Service</h3>
+        <p><strong>Associated with Eindhoven University of Technology</strong></p>
+        <p>Developed and deployed a web-based tool aimed at improving trust and transparency between the public and the Metropolitan Police Service of London.</p>
+        <p><strong>Grade:</strong> 9/10</p>
+      </div>
+      
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <h3>LungWise: Medical Image Classification Neural Network</h3>
+        <p><strong>Associated with Eindhoven University of Technology</strong></p>
+        <p>Developed and executed a ML pipeline for medical image classification, training various neural network models to achieve optimal performance. Additionally, designed a unique logo to give the project a start-up essence and marketized the neural network.</p>
+        <p><strong>Grade:</strong> 9/10</p>
+      </div>
+      
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <h3>Sentiment Analysis on American Airlines' Tweets</h3>
+        <p><strong>Associated with Eindhoven University of Technology</strong></p>
+        <p>Performed a large-scale analysis on over 6 million tweets of airline conversations, using advanced tools for extensive sentiment analysis in multiple languages (VADER).</p>
+        <p><strong>Grade:</strong> 10/10</p>
+      </div>
+    </div>
   </section>
 
-  <section class="experience">
-    <h2>Professional Experience</h2>
-    <h3>Teaching Assistant</h3>
-    <p>Eindhoven University of Technology (06/2024 – Present)</p>
-    <ul>
-      <li>Developing a comprehensive pipeline with a dashboard to promote, organize, predict, and automate the nomination process for academic awards.</li>
-      <li>Streamlining award nominations at internal, national, and international levels using automated data extraction and tailored email generation.</li>
-    </ul>
-    
-    <h3>Student Mentor</h3>
-    <p>Eindhoven University of Technology (08/2024 – Present)</p>
-    <ul>
-      <li>Providing guidance and support to fellow students to help them navigate academic challenges and achieve their educational goals.</li>
-    </ul>
-    
-    <h3>Data Analyst Intern</h3>
-    <p>Riu Hotels & Resorts (07/2024 – 08/2024)</p>
-    <ul>
-      <li>Analyzed and interpreted data to support business decisions, created a comprehensive dashboard with visualizations.</li>
-      <li>Collaborated with various departments to optimize operational efficiency and enhance customer satisfaction.</li>
-    </ul>
-    
-    <h3>Receptionist (Full-Time)</h3>
-    <p>Riu Hotels & Resorts (07/2021 – 08/2023)</p>
-    <ul>
-      <li>Managed guest inquiries, reservations, and check-ins while demonstrating proficiency in multilingual communication (English, Spanish, German, Dutch, Catalan).</li>
-      <li>Used hotel management software for efficient processing of reservations, check-ins, and check-outs.</li>
-    </ul>
+  <!-- Books Section -->
+  <section id="books" class="books">
+    <h2>Books I've Read</h2>
+    <p>Books that shaped the way I think and work every day.</p>
+    <div class="book-list">
+      <div class="book">
+        <img src="images/Atomic Habits.jpg" alt="Atomic Habits">
+      </div>
+      <div class="book">
+        <img src="images/deep-work.jpg" alt="Deep Work">
+      </div>
+      <div class="book">
+        <img src="images/the-subtle-art.jpg" alt="The Subtle Art of Not Giving a F*ck">
+      </div>
+    </div>
   </section>
 
+  <!-- Skills Section -->
   <section class="skills">
     <h2>Skills & Interests</h2>
     <h3>Technical Skills</h3>
@@ -90,27 +112,25 @@
     </ul>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+  <!-- Contact Section -->
+<section class="contact">
+  <h2>Contact</h2>
+  <button onclick="window.location.href='mailto:p.vicovanberkel@gmail.com';">Send Me an Email</button>
+</section>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
+<!-- Footer Section -->
+<footer>
+  <div class="footer-container">
     <p>© 2024 Pablo Vico. All rights reserved.</p>
     <p>Contact: <a href="mailto:p.vicovanberkel@gmail.com">p.vicovanberkel@gmail.com</a></p>
-    <p><a href="https://linkedin.com/in/pablovicovanberkel" target="_blank">LinkedIn Profile</a></p>
-  </footer>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/pablovicovanberkel" target="_blank">LinkedIn Profile</a>
+      <a href="https://github.com" target="_blank">GitHub Profile</a>
+    </div>
+  </div>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
