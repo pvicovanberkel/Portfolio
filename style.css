@@ -1,4 +1,4 @@
-/* Global Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,254 +6,380 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f6f9;
-  color: #34495e; /* Navy Text Color */
-  line-height: 1.6;
-  padding: 0 10%;
+  font-family: 'Roboto', sans-serif; /* Updated font */
+  background-color: #121212; /* Dark background */
+  color: #ecf0f1; /* Light text */
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #34495e; /* Navy background */
-  color: white;
+  background-color: #121212;
   padding: 10px 0;
   text-align: center;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.center-content a {
+.icon-link {
   color: white;
-  text-decoration: none;
   font-size: 1.5em;
   margin: 0 15px;
-  padding: 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.center-content a:hover {
-  color: #4CAF50; /* Green Hover */
-}
-
-/* Header Section */
-header {
-  text-align: center;
-  padding: 30px 0;
-  background-color: #34495e;
+.icon-link:hover {
+  transform: scale(1.2);
   color: white;
 }
 
-.profile-container {
+/* Profile Section */
+.profile-info {
+  padding: 40px 20px;
   text-align: center;
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  color: #ecf0f1;
+}
+
+.profile-info .profile-container img {
+  width: 200px; /* Larger profile photo */
+  height: 200px; /* Maintain square aspect ratio */
+  border-radius: 50%; /* Make it round */
+  transition: transform 0.3s ease;
+}
+
+.profile-info .profile-container img:hover {
+  transform: scale(1.2); /* Zoom on hover */
+}
+
+.profile-info h1 {
+  font-size: 2.5em;
   margin-top: 20px;
 }
 
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.profile-info .location {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.profile-info .bio {
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: #bdc3c7;
+}
+
+/* What I Work With Section */
+.work-with {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  color: #ecf0f1;
+}
+
+.work-with h2 {
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2em;
 }
 
-header p {
-  font-size: 1.5em;
+.skills-icons i {
+  color: white;
+  transition: transform 0.3s ease;
 }
 
-/* About Section */
+.skills-icons i:hover {
+  transform: scale(1.2);
+}
+
+/* About Me Section */
 .about {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 40px;
+  color: #ecf0f1;
 }
 
 .about h2 {
-  font-size: 2.2em;
-  color: #34495e;
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
 
-/* Books Section */
+.about p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #7f8c8d;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Updated font */
+  background-color: #121212; /* Dark background */
+  color: #ecf0f1; /* Light text */
+}
+
+/* Experience Section without Timeline */
+.experience {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #121212; /* Dark background */
+  color: #ecf0f1; /* Light text */
+}
+
+.experience h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white; /* White title */
+}
+
+/* Job Section */
+.job {
+  background-color: #fff; /* White background for the content */
+  color: black; /* Black text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.job h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.job p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Hover effect for job content */
+.job:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .job {
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Projects Section */
+.projects {
+  padding: 40px 20px;
+}
+
+.projects-title {
+  text-align: center; /* Center the title */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ecf0f1; /* Light text color for the title */
+}
+
+.projects-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff; /* White background for the project cards */
+  color: #080909; /* Black text inside the cards */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8; /* Light background on hover */
+}
+
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* Books Section */
 .books {
-  margin-top: 40px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #121212;
+  color: #ecf0f1;
 }
 
 .books h2 {
-  font-size: 2.2em;
-  color: #34495e; /* Navy header color */
+  font-size: 2.5em;
   margin-bottom: 20px;
-  text-align: left; /* Align the section title to the left */
+}
+
+.books-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
 .book-list {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .book {
-  text-align: center;
-  max-width: 150px;
+  width: 150px;
+  height: 225px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .book img {
   width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  height: 100%;
+  object-fit: cover;
 }
 
-.book img:hover {
-  transform: scale(1.05); /* Zoom in by 10% when hovered */
+.book:hover {
+  transform: scale(1.05); /* Zoom effect */
 }
 
-
-/* Projects Section */
-.projects {
-  margin-top: 40px;
-}
-
-.projects h2 {
-  font-size: 2.2em;
-  color: #34495e; /* Bold navy header */
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.projects p {
-  font-size: 1.1em;
-  color: #7f8c8d; /* Lighter gray text for readability */
-  margin-bottom: 20px;
-}
-
-.project-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
-  gap: 20px;
-}
-
-.project-card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card h3 {
-  font-size: 1.5em;
-  color: #34495e; /* Bold navy */
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  font-size: 1.1em;
-  color: #7f8c8d; /* Lighter gray text */
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-/* Hover effect for the project cards */
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slight elevation on hover */
-}
-
-/* Responsive Design - 2 columns on medium screens */
-@media (max-width: 1200px) {
-  .project-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
-  }
-}
-
-/* Responsive Design - 1 column on smaller screens */
 @media (max-width: 768px) {
-  .project-cards {
-    grid-template-columns: 1fr; /* 1 column per row */
+  .book-list {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 /* Contact Section */
 .contact {
-  margin-top: 40px;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.contact h2 {
-  font-size: 2.2em;
-  color: #34495e;
-  margin-bottom: 20px;
-}
-
-button {
+.contact button {
   padding: 15px 30px;
-  background-color: #4CAF50; /* Green background */
+  background-color: #3498db;
   color: white;
   font-size: 1.2em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 20px;
 }
 
-button:hover {
-  background-color: #45a049; /* Darker green on hover */
+.contact button:hover {
+  background-color: #2980b9;
 }
 
 /* Footer Section */
 footer {
-  background-color: #34495e;
+  background-color: #121212;
   color: white;
-  padding: 40px 20px;
+  padding: 20px;
   text-align: center;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 40px;
 }
 
 footer p {
-  font-size: 1.1em;
-  color: #ecf0f1; /* Light gray text */
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 footer a {
-  color: #4CAF50;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
-  margin: 5px;
 }
 
 footer a:hover {
-  color: #2ecc71;
+  color: #3498db;
 }
 
-.social-links {
-  margin-top: 15px;
+/* Rolling Line Section */
+.rolling-line {
+  background-color: #121212;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hides anything outside the container */
 }
 
-.social-links a {
-  margin: 0 15px;
+.rolling-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Keeps the content in a single line */
+  animation: scroll 15s linear infinite; /* Speed up the scrolling */
 }
 
-footer p:last-child {
-  margin-top: 20px;
-  font-size: 1em;
+.skill-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 40px; /* Space between icon and text */
+  font-size: 1.5em;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.skill-item i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.skill-item:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Styling for logo images (NumPy & Pandas) */
+.logo-img {
+  width: 30px; /* Size of the logo */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+/* Animation for scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Start off screen on the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off screen on the left */
+  }
 }
