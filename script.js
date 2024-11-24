@@ -66,4 +66,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    const cursor = document.querySelector('.cursor-glow');
+    let isVisible = false;
+
+    document.addEventListener('mousemove', function(e) {
+        if (!isVisible) {
+            cursor.style.opacity = 1;
+            isVisible = true;
+        }
+        
+        // Simply follow the cursor exactly
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    document.addEventListener('mouseleave', function() {
+        cursor.style.opacity = 0;
+        isVisible = false;
+    });
 });
