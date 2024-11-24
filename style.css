@@ -1,21 +1,25 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --background-dark: #121212; /* Material Design's recommended dark theme background */
+  --surface-dark: #1e1e1e;    /* Slightly lighter shade for cards/surfaces */
+  --text-primary: #ecf0f1;    /* Light text for dark background */
 }
 
 body {
   font-family: 'Roboto', sans-serif; /* Updated font */
-  background-color: #121212; /* Dark background */
-  color: #ecf0f1; /* Light text */
+  background-color: var(--background-dark); /* Dark background */
+  color: var(--text-primary); /* Light text */
+  padding-top: 60px; /* Adjust this value based on your top bar height */
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: #121212;
+  background-color: var(--background-dark);
   padding: 10px 0;
   text-align: center;
+  position: fixed; /* Make it fixed */
+  top: 0; /* Stick to top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .icon-link {
@@ -134,22 +138,22 @@ body {
 
 body {
   font-family: 'Roboto', sans-serif; /* Updated font */
-  background-color: #121212; /* Dark background */
-  color: #ecf0f1; /* Light text */
+  background-color: var(--background-dark); /* Dark background */
+  color: var(--text-primary); /* Light text */
 }
 
 /* Experience Section without Timeline */
 .experience {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 40px 20px;
-  text-align: center;
-  background-color: #121212; /* Dark background */
-  color: #ecf0f1; /* Light text */
 }
 
 .experience h2 {
+  text-align: center;
   font-size: 2.5em;
-  margin-bottom: 20px;
-  color: white; /* White title */
+  margin-bottom: 40px;
+  color: #ecf0f1; /* Light color to match your site's theme */
 }
 
 /* Job Section */
@@ -209,7 +213,7 @@ body {
 }
 
 .project-card {
-  background-color: #fff; /* White background for the project cards */
+  background-color: var(--surface-dark); /* White background for the project cards */
   color: #080909; /* Black text inside the cards */
   padding: 20px;
   border-radius: 10px;
@@ -231,6 +235,7 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   background-color: #f8f8f8; /* Light background on hover */
+  animation: float 3s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
@@ -382,4 +387,129 @@ footer a:hover {
   100% {
     transform: translateX(-100%); /* End off screen on the left */
   }
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #3498db; /* Changed to blue to match your site's theme */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 24px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3498db; /* Changed to match the line */
+}
+
+.timeline-content {
+  background-color: var(--surface-dark);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background-color: #2d2d2d;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #000; /* Changed to black */
+}
+
+.timeline-date {
+  color: #000; /* Changed to black */
+  font-size: 0.9em;
+}
+
+.timeline-content p {
+  color: #000; /* Added to ensure paragraph text is black */
+}
+
+/* Ensure text remains visible on hover */
+.timeline-content h3,
+.timeline-content p,
+.timeline-date {
+  color: var(--text-primary);
+}
+
+/* Dark mode adjustments */
+body.dark-mode .timeline-content {
+  background-color: var(--surface-dark);
+}
+
+body.dark-mode .timeline-header h3,
+body.dark-mode .timeline-date,
+body.dark-mode .timeline-content p {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .timeline-header {
+    flex-direction: column;
+  }
+  
+  .timeline-date {
+    margin-top: 5px;
+  }
+}
+
+/* Adjust the progress bar position if you have one */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #3498db;
+  width: 0%;
+  z-index: 1001;
+  transition: width 0.2s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
