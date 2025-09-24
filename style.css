@@ -1,49 +1,65 @@
 :root {
-  --background-dark: #121212; /* Material Design's recommended dark theme background */
-  --surface-dark: #1e1e1e;    /* Slightly lighter shade for cards/surfaces */
-  --text-primary: #ecf0f1;    /* Light text for dark background */
+  --bg: #ffffff;
+  --text: #0f172a;           /* slate-900 */
+  --muted: #475569;          /* slate-600 */
+  --muted-2: #64748b;        /* slate-500 */
+  --card: #ffffff;
+  --card-border: #e2e8f0;    /* slate-200 */
+  --accent: #111827;         /* gray-900 */
+  --brand: #111827;          /* near-black headings/buttons like Anvil */
+  --brand-2: #0f172a;        /* deep slate */
+  --link: #1f2937;           /* gray-800 */
+  --ring: rgba(17, 24, 39, 0.08);
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Updated font */
-  background-color: var(--background-dark); /* Dark background */
-  color: var(--text-primary); /* Light text */
-  padding-top: 60px; /* Adjust this value based on your top bar height */
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 60px; /* Keep spacing for fixed top bar */
 }
 
 /* Top Bar */
 .top-bar {
-  background-color: var(--background-dark);
-  padding: 10px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--card-border);
+  padding: 12px 0;
   text-align: center;
-  position: fixed; /* Make it fixed */
-  top: 0; /* Stick to top */
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays on top of other content */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .icon-link {
-  color: white;
-  font-size: 1.5em;
-  margin: 0 15px;
+  color: var(--link);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 16px;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .icon-link:hover {
-  transform: scale(1.2);
-  color: white;
+  background-color: rgba(15, 23, 42, 0.06);
+  color: var(--brand);
 }
 
 /* Profile Section */
 .profile-info {
-  padding: 40px 20px;
+  padding: 64px 20px 24px;
   text-align: center;
-  background-color: #121212;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg);
   margin-top: 40px;
-  color: #ecf0f1;
+  color: var(--text);
 }
 
 .profile-info .profile-container img {
@@ -58,35 +74,39 @@ body {
 }
 
 .profile-info h1 {
-  font-size: 2.5em;
-  margin-top: 20px;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 12px;
+  color: var(--brand);
 }
 
 .profile-info .location {
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
 }
 
 .profile-info .bio {
-  font-size: 1.1em;
+  font-size: 16px;
   margin-top: 10px;
-  color: #bdc3c7;
+  color: var(--muted-2);
 }
 
 /* What I Work With Section */
 .work-with {
-  padding: 40px 20px;
+  padding: 24px 20px 8px;
   text-align: center;
-  background-color: #121212;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
-  color: #ecf0f1;
+  background-color: var(--bg);
+  margin-top: 24px;
+  color: var(--text);
 }
 
 .work-with h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 36px;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  color: var(--brand);
 }
 
 .skills-icons {
@@ -107,24 +127,22 @@ body {
 
 /* About Me Section */
 .about {
-  padding: 40px 20px;
+  padding: 32px 20px;
   text-align: center;
-  background-color: #121212;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
-  color: #ecf0f1;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .about h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: var(--brand);
 }
 
 .about p {
-  font-size: 1.1em;
-  line-height: 1.7;
-  color: #7f8c8d;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted-2);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -137,9 +155,9 @@ body {
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Updated font */
-  background-color: var(--background-dark); /* Dark background */
-  color: var(--text-primary); /* Light text */
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* Experience Section without Timeline */
@@ -151,19 +169,20 @@ body {
 
 .experience h2 {
   text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  color: #ecf0f1; /* Light color to match your site's theme */
+  font-size: 36px;
+  margin-bottom: 32px;
+  color: var(--brand);
 }
 
 /* Job Section */
 .job {
-  background-color: #fff; /* White background for the content */
-  color: black; /* Black text */
+  background-color: var(--card);
+  color: var(--text);
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+  margin-bottom: 16px;
 }
 
 .job h3 {
@@ -195,10 +214,10 @@ body {
 }
 
 .projects-title {
-  text-align: center; /* Center the title */
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #ecf0f1; /* Light text color for the title */
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: var(--brand);
 }
 
 .projects-description {
@@ -213,12 +232,13 @@ body {
 }
 
 .project-card {
-  background-color: var(--surface-dark); /* White background for the project cards */
-  color: #080909; /* Black text inside the cards */
+  background-color: var(--card);
+  color: var(--text);
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card h3 {
@@ -232,10 +252,8 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  background-color: #f8f8f8; /* Light background on hover */
-  animation: float 3s ease-in-out infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -249,8 +267,8 @@ body {
 .books {
   padding: 40px 20px;
   text-align: center;
-  background-color: #121212;
-  color: #ecf0f1;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .books h2 {
@@ -317,9 +335,10 @@ body {
 
 /* Footer Section */
 footer {
-  background-color: #121212;
-  color: white;
-  padding: 20px;
+  background-color: var(--bg);
+  border-top: 1px solid var(--card-border);
+  color: var(--muted);
+  padding: 24px 20px;
   text-align: center;
   margin-top: 40px;
 }
@@ -329,23 +348,23 @@ footer p {
 }
 
 footer a {
-  color: white;
+  color: var(--link);
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 footer a:hover {
-  color: #3498db;
+  color: var(--brand);
 }
 
 /* Rolling Line Section */
 .rolling-line {
-  background-color: #121212;
-  padding: 10px 0;
+  background-color: transparent;
+  padding: 6px 0;
   position: relative;
   width: 100%;
-  overflow: hidden; /* Hides anything outside the container */
+  overflow: hidden;
 }
 
 .rolling-content {
@@ -358,10 +377,10 @@ footer a:hover {
 .skill-item {
   display: inline-flex;
   align-items: center;
-  margin-right: 40px; /* Space between icon and text */
-  font-size: 1.5em;
-  color: white;
-  transition: transform 0.3s ease;
+  margin-right: 40px;
+  font-size: 18px;
+  color: var(--muted);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .skill-item i {
@@ -369,14 +388,15 @@ footer a:hover {
 }
 
 .skill-item:hover {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: translateY(-1px);
+  color: var(--brand);
 }
 
 /* Styling for logo images (NumPy & Pandas) */
 .logo-img {
-  width: 30px; /* Size of the logo */
+  width: 22px;
   height: auto;
-  margin-right: 10px; /* Space between logo and text */
+  margin-right: 10px;
 }
 
 /* Animation for scrolling */
@@ -401,7 +421,7 @@ footer a:hover {
   top: 0;
   height: 100%;
   width: 2px;
-  background: #3498db; /* Changed to blue to match your site's theme */
+  background: #e2e8f0;
 }
 
 .timeline-item {
@@ -418,21 +438,22 @@ footer a:hover {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #3498db; /* Changed to match the line */
+  background: var(--brand);
+  box-shadow: 0 0 0 4px var(--ring);
 }
 
 .timeline-content {
-  background-color: var(--surface-dark);
-  border-radius: 8px;
+  background-color: var(--card);
+  border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
-  background-color: #2d2d2d;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.1);
 }
 
 .timeline-header {
@@ -444,25 +465,23 @@ footer a:hover {
 
 .timeline-header h3 {
   margin: 0;
-  font-size: 1.2em;
-  color: #000; /* Changed to black */
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brand);
 }
 
 .timeline-date {
-  color: #000; /* Changed to black */
-  font-size: 0.9em;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .timeline-content p {
-  color: #000; /* Added to ensure paragraph text is black */
+  color: var(--muted);
 }
 
 /* Ensure text remains visible on hover */
-.timeline-content h3,
-.timeline-content p,
-.timeline-date {
-  color: var(--text-primary);
-}
+/* Remove dark-mode override so light theme prevails */
 
 /* Dark mode adjustments */
 body.dark-mode .timeline-content {
